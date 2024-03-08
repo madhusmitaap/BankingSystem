@@ -1,0 +1,178 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  :root {
+    --navbar-height: 59px;
+  
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  
+  body {
+  
+    background: rgb(217, 211, 211);
+    width: 100%;
+  
+  
+  }
+  
+  #logo h1 {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+    padding-left:0.5rem;
+  }
+
+  #navbar {
+    display: flex;
+    align-items: center;
+    top: 0px;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 6px 63px 0 rgb(20 20 45 / 20%);
+  
+  }
+  
+  
+  
+  #navbar::before {
+    content: "";
+    background-color: rgba(253, 255, 253, 0.93);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+  }
+  
+  #navbar ul {
+    display: flex;
+    font-family: 'Bree Serif', serif;
+    list-style: none;
+    font-weight: 580;
+    padding-left: 40%;
+  
+  }
+  
+  #navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+    font-weight: 580;
+  
+  }
+  
+  #navbar ul li a {
+    color: rgb(14, 14, 14);
+    display: block;
+    padding: 32px 12px;
+    /* border-radius: 20px; */
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .50s ease;
+    font-size: 1.3rem;
+  }
+  
+  #navbar ul li a:hover {
+    color: rgb(254, 254, 255);
+    background-color: rgb(30, 29, 117);
+  }
+ 
+  #home {
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 615px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  #home::before {
+    content: "";
+    position: absolute;
+    background: url(man5.jpeg)no-repeat center center/cover;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+  }
+  
+  #home h1 {
+    color: white;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    font-size: 2.5rem;
+  
+  }
+  
+  #home p {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  }
+  
+  .foot-panel {
+    background-color: #84aed5;
+    color: white;
+    height: 50px;
+    font-family: 'Bree Serif', serif;
+    padding: 3%;
+    font-weight: 300;
+  
+  }
+  
+  .pages {
+    font-size: 1.3rem;
+    text-align: center;
+    padding-top: 0px;
+  }
+  
+  .copyright {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+      float: right;
+      display: block;
+    }
+    .home .footer .copyright .item{
+      float: none;
+      display: block;
+    }
+    .logo .pages{
+      float: none;
+      display: block;
+    }
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive .icon .item{
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .navbar.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
